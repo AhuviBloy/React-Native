@@ -6,8 +6,7 @@ import "react-native-gesture-handler"
 import HomeScreen from './src/component/home'; 
 import AddNoteScreen from './src/component/AddNote';
 import EditNoteScreen from './src/component/EditNote';
-import ViewNoteScreen from "./src/component/ViewNote"
-import SplashScreen from "./src/component/Splash"
+
 
 const Stack = createStackNavigator()
 
@@ -31,11 +30,9 @@ export default function App() {
             cardStyle: { backgroundColor: "#fff" },
           }}
         >
-          <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Home" component={HomeScreen} options={{ title: "My Notes" }} />
           <Stack.Screen name="AddNote" component={AddNoteScreen} options={{ title: "Add New Note" }} />
           <Stack.Screen name="EditNote" component={EditNoteScreen} options={{ title: "Edit Note" }} />
-          <Stack.Screen name="ViewNote" component={ViewNoteScreen} options={{ title: "Note Details" }} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
